@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://byfheo6uabewc"]
+
+[ext_resource type="Script" path="res://ball.gd" id="1_41u45"]
+[ext_resource type="PackedScene" uid="uid://br61w114eamwr" path="res://assets/ball_teamBlue.gltf.glb" id="1_x8fbi"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_0ocpx"]
+radius = 0.99385154
+
+[node name="RigidBody3D" type="RigidBody3D" unique_id=295495810]
+gravity_scale = 2.0
+script = ExtResource("1_41u45")
+
+[node name="ball_teamBlue_gltf" parent="." unique_id=1729365948 instance=ExtResource("1_x8fbi")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1397421185]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10275209, -0.01631391, -0.095152855)
+shape = SubResource("SphereShape3D_0ocpx")

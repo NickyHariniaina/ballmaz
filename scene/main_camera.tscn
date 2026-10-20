@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c2l01bsede88m"]
+
+[ext_resource type="Script" uid="uid://cdtny5t8jyfbm" path="res://camera_3d.gd" id="1_vbit3"]
+
+[node name="Camera3D" type="Camera3D" unique_id=886421788 node_paths=PackedStringArray("target")]
+transform = Transform3D(1, 0, 0, 0, 0.90630776, 0.42261827, 0, -0.42261827, 0.90630776, 0, 0, 0)
+script = ExtResource("1_vbit3")
+target = NodePath("")

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dxa3n476q68bc"]
+
+[ext_resource type="PackedScene" uid="uid://550j3rqqlfle" path="res://ball.tscn" id="1_jwv3a"]
+[ext_resource type="Script" uid="uid://cdtny5t8jyfbm" path="res://camera_3d.gd" id="2_dopym"]
+[ext_resource type="PackedScene" uid="uid://b6gmgfqq32rtt" path="res://green_ground_test.tscn" id="3_ootpb"]
+[ext_resource type="PackedScene" uid="uid://d1rd5rmd8lsyv" path="res://blue_sky.tscn" id="4_v38iq"]
+[ext_resource type="PackedScene" uid="uid://cd6hcgmfnx28f" path="res://kill_zone.tscn" id="5_v8kj3"]
+
+[node name="Node3D" type="Node3D" unique_id=953684268]
+
+[node name="ball" parent="." unique_id=295495810 instance=ExtResource("1_jwv3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6785378, 0)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1911148072 node_paths=PackedStringArray("target")]
+transform = Transform3D(1, 0, 0, 0, 0.90630776, 0.4226183, 0, -0.4226183, 0.90630776, 0, 5.3572927, 10.766216)
+script = ExtResource("2_dopym")
+target = NodePath("../ball")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1518475144]
+transform = Transform3D(1, 0, 0, 0, 0.72712886, 0.68650097, 0, -0.68650097, 0.72712886, 0, 0, 0)
+shadow_enabled = true
+
+[node name="respawn_location" parent="." unique_id=2092357123 instance=ExtResource("3_ootpb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07165599, 0)
+
+[node name="WorldEnvironment" parent="." unique_id=466785359 instance=ExtResource("4_v38iq")]
+
+[node name="KillZone" parent="." unique_id=1259769127 instance=ExtResource("5_v8kj3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -50, 0)
+
+[connection signal="body_entered" from="KillZone" to="ball" method="_on_kill_zone_body_entered"]

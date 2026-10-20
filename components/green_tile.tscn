@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cj4fav7vl2iys"]
+
+[ext_resource type="PackedScene" uid="uid://ddqn5mkyxqso6" path="res://assets/tileLarge_forest.gltf.glb" id="1_b4a7a"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0ocpx"]
+size = Vector3(3.0110474, 0.5, 2.9974365)
+
+[node name="Node3D" type="Node3D" unique_id=2048564085]
+
+[node name="tileLarge_forest_gltf" parent="." unique_id=1220100436 instance=ExtResource("1_b4a7a")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=363323475]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.015563965, 0.5, -0.0045166016)
+shape = SubResource("BoxShape3D_0ocpx")

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cd6hcgmfnx28f"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5sxha"]
+size = Vector3(1, 0.001, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tuh0n"]
+size = Vector2(100, 100)
+
+[node name="KillZone" type="Area3D" unique_id=1259769127]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=192164353]
+transform = Transform3D(1000, 0, 0, 0, 1000, 0, 0, 0, 1000, 0, 0.5576935, 0)
+shape = SubResource("BoxShape3D_5sxha")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=682283904]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+mesh = SubResource("PlaneMesh_tuh0n")
