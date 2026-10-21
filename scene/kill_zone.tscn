@@ -14,4 +14,5 @@ shape = SubResource("BoxShape3D_5sxha")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=682283904]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+visible = false
 mesh = SubResource("PlaneMesh_tuh0n")

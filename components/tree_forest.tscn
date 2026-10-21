@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://28puvhso3o7v"]
+
+[ext_resource type="PackedScene" uid="uid://o80vdtth0ty7" path="res://assets/tree_forest.gltf.glb" id="1_vgy81"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_0ocpx"]
+height = 3.0
+
+[node name="Forest" type="Node3D" unique_id=730575511]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1588502673]
+
+[node name="tree_forest_gltf" parent="StaticBody3D" unique_id=413656642 instance=ExtResource("1_vgy81")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=68500780]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("CylinderShape3D_0ocpx")

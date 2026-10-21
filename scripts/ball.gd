@@ -6,7 +6,7 @@ extends RigidBody3D
 
 func _physics_process(delta: float) -> void:
 	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("space"):
 		respawn()
 	if input_dir.length() > 0:
 		var forward = camera.global_transform.basis.z

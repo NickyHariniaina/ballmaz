@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://87gvp0eynavs"]
+
+[ext_resource type="FontFile" uid="uid://cpqdo622v562r" path="res://font/Nunito-Bold.ttf" id="1_l62r4"]
+
+[node name="Text" type="Label3D" unique_id=554799668]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 2, 0)
+texture_filter = 1
+outline_modulate = Color(1, 1, 1, 0)
+text = "Hello"
+font = ExtResource("1_l62r4")

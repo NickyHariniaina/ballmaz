@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dxa3n476q68bc"]
 
-[ext_resource type="PackedScene" uid="uid://550j3rqqlfle" path="res://ball.tscn" id="1_jwv3a"]
-[ext_resource type="Script" uid="uid://cdtny5t8jyfbm" path="res://camera_3d.gd" id="2_dopym"]
-[ext_resource type="PackedScene" uid="uid://b6gmgfqq32rtt" path="res://green_ground_test.tscn" id="3_ootpb"]
-[ext_resource type="PackedScene" uid="uid://d1rd5rmd8lsyv" path="res://blue_sky.tscn" id="4_v38iq"]
-[ext_resource type="PackedScene" uid="uid://cd6hcgmfnx28f" path="res://kill_zone.tscn" id="5_v8kj3"]
+[ext_resource type="PackedScene" uid="uid://550j3rqqlfle" path="res://scene/ball.tscn" id="1_jwv3a"]
+[ext_resource type="Script" uid="uid://cdtny5t8jyfbm" path="res://scripts/camera_3d.gd" id="2_dopym"]
+[ext_resource type="PackedScene" uid="uid://b6gmgfqq32rtt" path="res://scene/green_ground_test.tscn" id="3_ootpb"]
+[ext_resource type="PackedScene" uid="uid://d1rd5rmd8lsyv" path="res://scene/blue_sky.tscn" id="4_v38iq"]
+[ext_resource type="PackedScene" uid="uid://cd6hcgmfnx28f" path="res://scene/kill_zone.tscn" id="5_v8kj3"]
 
 [node name="Node3D" type="Node3D" unique_id=953684268]
 
