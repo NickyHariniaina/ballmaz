@@ -21,7 +21,6 @@ func respawn():
 	linear_velocity = Vector3.ZERO
 	angular_velocity = Vector3.ZERO
 	
-	# On remet la caméra pile derrière la balle pour éviter le "travelling"
 	if camera:
 		camera.global_position = spawn_position + Vector3(0, 5, 10)
 

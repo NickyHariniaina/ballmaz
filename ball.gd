@@ -20,7 +20,7 @@ func respawn():
 	global_position = spawn_position
 	linear_velocity = Vector3.ZERO
 	angular_velocity = Vector3.ZERO
-	
+	State.reset_stars_for_current_level()
 	if camera:
 		camera.global_position = spawn_position + Vector3(0, 5, 10)
 

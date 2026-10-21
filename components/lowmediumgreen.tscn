@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://2bbtffvpvwtp"]
+
+[ext_resource type="PackedScene" uid="uid://dw14x31tr8t2c" path="res://assets/tileSlopeLowMedium_forest.gltf.glb" id="1_wmh72"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ro8gb"]
+size = Vector3(1.9545898, 0.9881592, 1)
+
+[node name="Node3D" type="Node3D" unique_id=1782942588]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=2016215305]
+
+[node name="tileSlopeLowMedium_forest_gltf" parent="StaticBody3D" unique_id=1820151174 instance=ExtResource("1_wmh72")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1608880845]
+transform = Transform3D(0.9712493, 0.23806462, 0, -0.23806462, 0.9712493, 0, 0, 0, 1, -0.0792346, 0.69643164, 0)
+shape = SubResource("BoxShape3D_ro8gb")

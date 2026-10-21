@@ -1,7 +1,71 @@
 [gd_scene format=3 uid="uid://e5eaqh6sh3xe"]
 
 [ext_resource type="PackedScene" uid="uid://dxa3n476q68bc" path="res://scene/main.tscn" id="1_xee3e"]
+[ext_resource type="PackedScene" uid="uid://cj4fav7vl2iys" path="res://components/green_tile.tscn" id="2_oc35s"]
+[ext_resource type="PackedScene" uid="uid://2bbtffvpvwtp" path="res://components/lowmediumgreen.tscn" id="3_suhml"]
+[ext_resource type="PackedScene" uid="uid://c6mbt12odl0dq" path="res://components/target.tscn" id="4_suhml"]
+[ext_resource type="PackedScene" uid="uid://cmfxmfdas1k2w" path="res://components/flag.tscn" id="5_xj6fv"]
+[ext_resource type="PackedScene" uid="uid://87gvp0eynavs" path="res://components/text_template.tscn" id="6_dxks8"]
 
 [node name="Level2" type="Node2D" unique_id=1658986727]
 
 [node name="Node3D" parent="." unique_id=953684268 instance=ExtResource("1_xee3e")]
+
+[node name="Node3D2" parent="." unique_id=2048564085 instance=ExtResource("2_oc35s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.22254705, -11)
+
+[node name="Node3D3" parent="." unique_id=836831467 instance=ExtResource("2_oc35s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.24869919, -17)
+
+[node name="Node3D4" parent="." unique_id=1782942588 instance=ExtResource("3_suhml")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.24536729, -21)
+
+[node name="Node3D5" parent="." unique_id=478939019 instance=ExtResource("3_suhml")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0.3680501, -23)
+
+[node name="Node3D7" parent="." unique_id=725942245 instance=ExtResource("3_suhml")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2, -0.24536729, -21)
+
+[node name="Node3D8" parent="." unique_id=1202573273 instance=ExtResource("3_suhml")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2, 0.3680501, -23)
+
+[node name="Node3D9" parent="." unique_id=1271296435 instance=ExtResource("3_suhml")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2, -0.24536729, -21)
+
+[node name="Node3D10" parent="." unique_id=1718243369 instance=ExtResource("3_suhml")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2, 0.3680501, -23)
+
+[node name="Node3D6" parent="." unique_id=923711689 instance=ExtResource("2_oc35s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -43)
+
+[node name="Target" parent="." unique_id=2031039007 instance=ExtResource("4_suhml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -43)
+
+[node name="Node3D11" parent="." unique_id=2050207270 instance=ExtResource("2_oc35s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -49)
+
+[node name="Node3D12" parent="." unique_id=478634893 instance=ExtResource("2_oc35s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -55)
+
+[node name="Node3D13" parent="." unique_id=1022961355 instance=ExtResource("2_oc35s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -55)
+
+[node name="Node3D14" parent="." unique_id=698885972 instance=ExtResource("2_oc35s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -55)
+
+[node name="Node3D15" parent="." unique_id=1211638878 instance=ExtResource("2_oc35s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -61)
+
+[node name="Node3D16" parent="." unique_id=43299415 instance=ExtResource("2_oc35s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -61)
+
+[node name="Node3D17" parent="." unique_id=158579284 instance=ExtResource("2_oc35s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -61)
+
+[node name="flag" parent="." unique_id=721716538 instance=ExtResource("5_xj6fv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -61)
+
+[node name="Text" parent="." unique_id=554799668 instance=ExtResource("6_dxks8")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 2, -36)
+text = "Pass inside a ring to earn stars.
+Stars are useful for purchasing in the store."

@@ -5,14 +5,18 @@
 [ext_resource type="PackedScene" uid="uid://b6gmgfqq32rtt" path="res://scene/green_ground_test.tscn" id="3_ootpb"]
 [ext_resource type="PackedScene" uid="uid://d1rd5rmd8lsyv" path="res://scene/blue_sky.tscn" id="4_v38iq"]
 [ext_resource type="PackedScene" uid="uid://cd6hcgmfnx28f" path="res://scene/kill_zone.tscn" id="5_v8kj3"]
+[ext_resource type="FontFile" uid="uid://d2wscn1y0kpql" path="res://font/Nunito-Black.ttf" id="6_p1hux"]
+[ext_resource type="Script" uid="uid://co6qwfh5nx8es" path="res://scripts/label.gd" id="7_b5f6u"]
+[ext_resource type="Texture2D" uid="uid://bbguf6qifkgmr" path="res://assets/star.png" id="7_of57s"]
 
 [node name="Node3D" type="Node3D" unique_id=953684268]
 
 [node name="ball" parent="." unique_id=295495810 instance=ExtResource("1_jwv3a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6785378, 0)
+gravity_scale = 4.0
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1911148072 node_paths=PackedStringArray("target")]
-transform = Transform3D(1, 0, 0, 0, 0.90630776, 0.4226183, 0, -0.4226183, 0.90630776, 0, 5.3572927, 10.766216)
+transform = Transform3D(1, 0, 0, 0, 0.90630776, 0.42261833, 0, -0.42261833, 0.90630776, 0, 7.783087, 15.968342)
 script = ExtResource("2_dopym")
 target = NodePath("../ball")
 
@@ -27,5 +31,27 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07165599, 0)
 
 [node name="KillZone" parent="." unique_id=1259769127 instance=ExtResource("5_v8kj3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -50, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=116034393]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=772314284]
+texture_filter = 1
+offset_left = 61.0
+offset_top = 12.0
+offset_right = 445.0
+offset_bottom = 226.0
+theme_override_fonts/font = ExtResource("6_p1hux")
+theme_override_font_sizes/font_size = 25
+text = "0"
+script = ExtResource("7_b5f6u")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=2144762435]
+texture_filter = 1
+offset_left = 13.000002
+offset_top = 13.0
+offset_right = 95.0
+offset_bottom = 95.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("7_of57s")
 
 [connection signal="body_entered" from="KillZone" to="ball" method="_on_kill_zone_body_entered"]
