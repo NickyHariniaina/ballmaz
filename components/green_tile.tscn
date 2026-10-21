@@ -7,8 +7,10 @@ size = Vector3(3.0110474, 0.5, 2.9974365)
 
 [node name="Node3D" type="Node3D" unique_id=2048564085]
 
-[node name="tileLarge_forest_gltf" parent="." unique_id=1220100436 instance=ExtResource("1_b4a7a")]
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=317864719]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=363323475]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=363323475]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.015563965, 0.5, -0.0045166016)
 shape = SubResource("BoxShape3D_0ocpx")
+
+[node name="tileLarge_forest_gltf" parent="StaticBody3D" unique_id=1220100436 instance=ExtResource("1_b4a7a")]
